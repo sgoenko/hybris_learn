@@ -341,5 +341,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="platformservices" />
   </component>
 </module>
