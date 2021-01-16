@@ -51,4 +51,7 @@
         <property name="productService" ref="productService"/>
     </bean>
 
+    <bean id="concerttourEventListener" class="concerttours.events.NewBandEventListener" parent="abstractEventListener">
+        <property name="modelService" ref="modelService" />
+    </bean>
 </beans>
