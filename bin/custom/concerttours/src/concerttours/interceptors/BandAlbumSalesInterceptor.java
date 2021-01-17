@@ -11,31 +11,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import concerttours.events.BandAlbumSalesEvent;
 import concerttours.model.BandModel;
 
-public class BandAlbumSalesInterceptor implements ValidateInterceptor, PrepareInterceptor {
+public class BandAlbumSalesInterceptor
+        implements ValidateInterceptor<BandModel>, PrepareInterceptor<BandModel> {
     private static final long BIG_SALES = 50000L;
     private static final long NEGATIVE_SALES = 0L;
     @Autowired
     private EventService eventService;
 
     @Override
-    public void onValidate(final Object model, final InterceptorContext ctx) throws InterceptorException {
-        if (model instanceof BandModel) {
-            final BandModel band = (BandModel) model;
-            final Long sales = band.getAlbumSales();
-            if (sales != null && sales.longValue() < NEGATIVE_SALES) {
-                throw new InterceptorException("Album sales must be positive");
-            }
+    public void onValidate(final BandModel model, final InterceptorContext ctx) throws InterceptorException {
+        //       if (model instanceof BandModel) {
+        final BandModel band = (BandModel) model;
+        final Long sales = band.getAlbumSales();
+        if (sales != null && sales.longValue() < NEGATIVE_SALES) {
+            throw new InterceptorException("Album sales must be positive");
         }
+        //       }
     }
 
     @Override
-    public void onPrepare(final Object model, final InterceptorContext ctx) throws InterceptorException {
-        if (model instanceof BandModel) {
-            final BandModel band = (BandModel) model;
-            if (hasBecomeBig(band, ctx)) {
-                eventService.publishEvent(new BandAlbumSalesEvent(band.getCode(), band.getName(), band.getAlbumSales()));
-            }
+    public void onPrepare(final BandModel model, final InterceptorContext ctx) throws InterceptorException {
+        //       if (model instanceof BandModel) {
+        final BandModel band = (BandModel) model;
+        if (hasBecomeBig(band, ctx)) {
+            eventService.publishEvent(new BandAlbumSalesEvent(band.getCode(), band.getName(), band.getAlbumSales()));
         }
+        //       }
     }
 
     private boolean hasBecomeBig(final BandModel band, final InterceptorContext ctx) {
