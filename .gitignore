@@ -25,6 +25,7 @@
 **/classes/**
 **/gensrc/**
 **/idea-module-files/**
+**/.idea/**
 **/.settings/**
 *.class
 .classpath

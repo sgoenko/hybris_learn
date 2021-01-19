@@ -446,11 +446,12 @@
     </option>
     <option name="configDirectory" value="$PROJECT_DIR$/config" />
     <option name="followSymlink" value="true" />
-    <option name="hybrisDirectory" value=".." />
+    <option name="hybrisDirectory" value="" />
     <option name="hybrisProject" value="true" />
-    <option name="ideModulesFilesDirectory" value="$PROJECT_DIR$/bin/custom/concerttours/idea-module-files" />
+    <option name="hybrisVersion" value="6.3.0.0-SNAPSHOT" />
+    <option name="ideModulesFilesDirectory" value="$PROJECT_DIR$/idea-module-files" />
     <option name="importOotbModulesInReadOnlyMode" value="true" />
     <option name="importedByVersion" value="2001.3" />
-    <option name="javadocUrl" value="" />
+    <option name="javadocUrl" value="https://help.hybris.com/6.3.0/api/commercesuite/index.html" />
   </component>
 </project>

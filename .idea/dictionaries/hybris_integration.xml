@@ -28,6 +28,7 @@
       <w>extname</w>
       <w>hac</w>
       <w>hybris</w>
+      <w>hybrisdemo</w>
       <w>impex</w>
       <w>itemtype</w>
       <w>jalo</w>
@@ -41,10 +42,12 @@
       <w>mediaweb</w>
       <w>metatype</w>
       <w>nimda</w>
+      <w>npmancillary</w>
       <w>oauth2</w>
       <w>partof</w>
       <w>paymentstandard</w>
       <w>platform</w>
+      <w>platformbackoffice</w>
       <w>platformservices</w>
       <w>pojos</w>
       <w>positiveshort</w>
@@ -68,6 +71,8 @@
       <w>workflow</w>
       <w>ybackoffice</w>
       <w>ybootstrap</w>
+      <w>yempty</w>
+      <w>yhacext</w>
     </words>
   </dictionary>
 </component>
