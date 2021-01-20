@@ -82,9 +82,12 @@ public class DefaultBandServiceIntegrationTest extends ServicelayerTest {
      * This test tests and demonstrates that the Service's getAllBand method calls the DAOs' getAllBand method and
      * returns the data it receives from it.
      */
+
     @Test
-    public void testBandServiceTours() throws Exception {
+    public void testBandServiceTours() throws Exception
+    {
         createCoreData();
+        importCsv("/impex/essentialdata-mediaformats.impex", "UTF-8");
         importCsv("/impex/concerttours-bands.impex", "utf-8");
         importCsv("/impex/concerttours-yBandTour.impex", "utf-8");
         final BandModel band = bandService.getBandForCode("A001");
